@@ -3,23 +3,21 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 text-center">
                 <h2 class="section-heading">My Ramblings</h2>
-                <p>This is where the Jekyll Blog Posts go.</p>  
-                <div class="col-lg-6 text-left">
-                    <ul>
-                      {% for post in site.posts %}
-                        <li>
-                          <a href="{{ post.url }}">
-                              <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
-                                {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
-                                {{ page.date | date: date_format }}
-                              </time>
-                              {{ post.title }}
-                          </a>
-                        </li>
-                      {% endfor %}
-                    </ul>
-                </div>
+                <p>This is where the Jekyll Blog Posts go.</p>
+                <ul>
+                  {% for post in site.posts limit: 10 %}
+                    <li>
+                        <h2>{{ post.title }}</h2>
+                        <p class="meta">{{ post.date | date_to_string }}</p>
+
+                        <div class="post">
+                        {{ post.content }}
+                        </div>
+                    </li>
+                  {% endfor %}
+                </ul>
             </div>
         </div>
     </div>
+    <div class="infinite-spinner"></div>
 </section>
