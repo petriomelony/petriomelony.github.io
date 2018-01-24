@@ -32,7 +32,6 @@ $(function() {
     
     // If we've scrolled past the loadNewPostsThreshold, fetch posts
     if ((documentHeight - loadNewPostsThreshold) < bottomScrollPosition) {
-      window.alert("Scroll hit, fetching");
       fetchPosts();
     }
   });
@@ -40,7 +39,10 @@ $(function() {
   // Fetch a chunk of posts
   function fetchPosts() {
     // Exit if postURLs haven't been loaded
-    if (!postURLs) return;
+    if (!postURLs) {
+	    window.alert("no postURLs");
+	    return;
+    }
     
     isFetchingPosts = true;
     
