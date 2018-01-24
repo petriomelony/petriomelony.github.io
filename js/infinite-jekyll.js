@@ -10,7 +10,7 @@ $(function() {
   $.getJSON('/all-posts.json', function(data) {
     postURLs = data["posts"];
 	  var maxPosts = postURLs.length;
-	  var loadedPosts = $(".post").children().length;
+	  var loadedPosts = $("li").children("div.post").length;
 	window.alert(loadedPosts);
     
     // If there aren't any more posts available to load than already visible, disable fetching
