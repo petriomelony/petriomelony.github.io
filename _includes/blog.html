@@ -5,7 +5,7 @@
                 <h2 class="section-heading">My Ramblings</h2>
                 <p>This is where I write about stuff.  Stay awhile and listen...</p>
                 <ul class="text-left">
-                  {% for post in site.posts %}
+                  {% for post in site.posts limit: 10 %}
                     <li>
                         <h2>{{ post.title }}</h2>
                         <p class="meta">{{ post.date | date_to_string }}</p>
