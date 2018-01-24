@@ -29,9 +29,11 @@ $(function() {
         documentHeight = $(document).height();
     
     // If we've scrolled past the loadNewPostsThreshold, fetch posts
+    /*
     if ((documentHeight - loadNewPostsThreshold) < bottomScrollPosition) {
       fetchPosts();
-    }
+    }*/
+    fetchPosts();
   });
   
   // Fetch a chunk of posts
