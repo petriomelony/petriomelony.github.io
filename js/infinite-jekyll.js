@@ -3,14 +3,15 @@ $(function() {
   var postURLs,
       isFetchingPosts = false,
       shouldFetchPosts = true,
-      postsToLoad = $(".posts").children().length,
+      postsToLoad = 0,
       loadNewPostsThreshold = 3000;
   
   // Load the JSON file containing all URLs
   $.getJSON('/all-posts.json', function(data) {
     postURLs = data["posts"];
-	  test = postURLs.length;
-	window.alert(test);
+	  var maxPosts = postURLs.length;
+	  var loadedPosts = $(".post").children().length;
+	window.alert(loadedPosts);
     
     // If there aren't any more posts available to load than already visible, disable fetching
     if (postURLs.length <= postsToLoad)
