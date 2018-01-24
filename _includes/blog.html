@@ -8,8 +8,13 @@
                     <ul>
                       {% for post in site.posts %}
                         <li>
-                          {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
-                          <a href="{{ post.url }}">{{ page.date | date: date_format }} {{ post.title }}</a>
+                          <a href="{{ post.url }}">
+                              <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+                                {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
+                                {{ page.date | date: date_format }}
+                              </time>
+                              {{ post.title }}
+                          </a>
                         </li>
                       {% endfor %}
                     </ul>
