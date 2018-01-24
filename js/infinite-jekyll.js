@@ -3,7 +3,7 @@ $(function() {
   var postURLs,
       isFetchingPosts = false,
       shouldFetchPosts = true,
-      postsToLoad = $(".post-list").children().length,
+      postsToLoad = $(".posts").children().length,
       loadNewPostsThreshold = 3000;
   
   // Load the JSON file containing all URLs
@@ -46,7 +46,7 @@ $(function() {
     // Load as many posts as there were present on the page when it loaded
     // After successfully loading a post, load the next one
     var loadedPosts = 0,
-        postCount = $(".post-list").children().length,
+        postCount = $(".posts").children().length,
         callback = function() {
           loadedPosts++;
           var postIndex = postCount + loadedPosts;
@@ -70,7 +70,7 @@ $(function() {
     var postURL = postURLs[index];
 		
     $.get(postURL, function(data) {
-      $(data).find(".post").appendTo(".post-list");
+      $(data).find(".post").appendTo(".posts");
       callback();
     });
   }
