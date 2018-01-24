@@ -5,32 +5,30 @@
                 <h2 class="section-heading">My Ramblings</h2>
                 <p>This is where I write about stuff.  Stay awhile and listen...</p>
                 <ul class="text-left post-list">
-                  {% for post in site.posts limit: 2 %}
-                    <li>
-                        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
-                          <header class="post-header">
-                            <h1 class="post-title p-name" itemprop="name headline">{{ post.title | escape }}</h1>
-                            <p class="post-meta">
-                              <time class="dt-published" datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">
-                                {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
-                                {{ post.date | date: date_format }}
-                              </time>
-                              {% if post.author %}
-                                <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">{{ page.author }}</span></span>
-                              {% endif %}</p>
-                          </header>
+                  {% for post in site.posts limit: 1 %}
+                    <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+                      <header class="post-header">
+                        <h1 class="post-title p-name" itemprop="name headline">{{ post.title | escape }}</h1>
+                        <p class="post-meta">
+                          <time class="dt-published" datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">
+                            {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
+                            {{ post.date | date: date_format }}
+                          </time>
+                          {% if post.author %}
+                            <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">{{ page.author }}</span></span>
+                          {% endif %}</p>
+                      </header>
 
-                          <div class="post-content e-content" itemprop="articleBody">
-                            {{ post.content }}
-                          </div>
+                      <div class="post-content e-content" itemprop="articleBody">
+                        {{ post.content }}
+                      </div>
 
-                          {% if site.disqus.shortname %}
-                            {% include disqus_comments.html %}
-                          {% endif %}
+                      {% if site.disqus.shortname %}
+                        {% include disqus_comments.html %}
+                      {% endif %}
 
-                          <a class="u-url" href="{{ post.url | relative_url }}" hidden></a>
-                        </article>
-                    </li>
+                      <a class="u-url" href="{{ post.url | relative_url }}" hidden></a>
+                    </article>
                   {% endfor %}
                 </ul>
             </div>
