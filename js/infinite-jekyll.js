@@ -3,7 +3,6 @@ $(function() {
   var postURLs,
       isFetchingPosts = false,
       shouldFetchPosts = true,
-      postsToLoad = 0,
       loadNewPostsThreshold = 3000;
   
   // Load the JSON file containing all URLs
@@ -11,7 +10,7 @@ $(function() {
     postURLs = data["posts"];
 	  var maxPosts = postURLs.length;
 	  var loadedPosts = $("li").children("div.post").length;
-	window.alert(loadedPosts);
+	  var postsToLoad = maxPosts - postsToLoad;
     
     // If there aren't any more posts available to load than already visible, disable fetching
     if (postURLs.length <= postsToLoad)
@@ -32,11 +31,10 @@ $(function() {
         documentHeight = $(document).height();
     
     // If we've scrolled past the loadNewPostsThreshold, fetch posts
-    /*
     if ((documentHeight - loadNewPostsThreshold) < bottomScrollPosition) {
+      window.alert("Scroll hit, fetching");
       fetchPosts();
-    }*/
-    fetchPosts();
+    }
   });
   
   // Fetch a chunk of posts
