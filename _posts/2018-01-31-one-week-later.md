@@ -13,6 +13,6 @@ Natasha and I were playing a cool game yesterday called Overcooked.  It was deve
 
 Here's a pic of it in action:
 
-![Screenshot of Overcooked]({{ "/assets/overcooked.jpg" =800x | absolute_url }})
+![Screenshot of Overcooked](/assets/overcooked.jpg){:class="img-responsive"}
 
 And that's about it for now!  Hopefully this image post works ok with Jekyll.
