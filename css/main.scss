@@ -99,3 +99,14 @@ $theme-dark: #222;
   grid-row: row 1 / span 2;
   z-index: 1;
 }
+
+.image-link {
+  cursor: -webkit-zoom-in;
+  cursor: -moz-zoom-in;
+  cursor: zoom-in;
+}
+
+body { 
+  -webkit-backface-visibility: hidden;
+  font-family: "Calibri", "Trebuchet MS", "Helvetica", sans-serif;
+}
