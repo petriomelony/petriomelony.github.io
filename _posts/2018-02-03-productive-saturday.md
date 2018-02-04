@@ -9,6 +9,6 @@ We also did a ton of laundry, cleaned our washroom, and then I made some egg bre
 
 Here's what the bread looked like, Natasha helped me with the braiding because I can never do it properly. 
 
-![Baked egg bread with sesame seeds](/assets/overcooked.jpg){:class="img-responsive"}
+![Baked egg bread with sesame seeds](/assets/IMG_20180203_192529.jpg){:class="img-responsive"}
 
 It was quite delicious, nothing like making homemade bread. I think I still prefer French bread though.
