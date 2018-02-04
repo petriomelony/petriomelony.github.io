@@ -11,4 +11,4 @@ Here's what the bread looked like, Natasha helped me with the braiding because I
 
 ![Baked egg bread with sesame seeds](/assets/IMG_20180203_192529.jpg){:class="img-responsive"}
 
-It was quite delicious, nothing like making homemade bread. I think I still prefer French bread though.
+It was quite delicious, nothing like making homemade bread. I think I still prefer French bread though. 
